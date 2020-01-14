@@ -4,11 +4,12 @@
 }
 
 <h1>ContactForm</h1>
-
+<!--div with elements of site needed to sent form-->
 @using (Html.BeginForm("ContactForm", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken();
 
+    <!--div with name-->
     <div class="form-horizontal">
         @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -16,6 +17,7 @@
         </div>
     </div>
 
+    <!--div with LastName-->
     <div class="form-horizontal">
         @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -23,6 +25,7 @@
         </div>
     </div>
 
+    <!--div with productName-->
     <div class="form-horizontal">
         @Html.LabelFor(model => model.ProductName, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -30,8 +33,8 @@
         </div>
     </div>
 
-    <hr/>
-
+    <hr />
+    <!--div with button-->
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Wyślij" class="btn btn-success" />

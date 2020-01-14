@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Lab6JakubKazimierskiZadDom.Models
 {
+    //class of model for joinUsForm (helpful when use database)
     public class WorkWithUsViewModel
     {
         /// <summary>

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Lab6JakubKazimierskiZadDom.Models
 {
+    //class of model for complainForm (helpful when use database)
     public class ComplainViewModel
     {
         /// <summary>

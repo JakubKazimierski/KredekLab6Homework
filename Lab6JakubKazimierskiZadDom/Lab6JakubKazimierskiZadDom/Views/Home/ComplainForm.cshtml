@@ -4,12 +4,13 @@
 }
 
 <h1>ComplainForm</h1>
-
+<!--div with form elements-->
 
 @using (Html.BeginForm("ComplainForm", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken();
 
+    <!--div with name-->
     <div class="form-horizontal">
         @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -17,6 +18,7 @@
         </div>
     </div>
 
+    <!--div with LastName-->
     <div class="form-horizontal">
         @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -24,6 +26,7 @@
         </div>
     </div>
 
+    <!--div with reason of complain-->
     <div class="form-horizontal">
         @Html.LabelFor(model => model.Complain, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -31,8 +34,8 @@
         </div>
     </div>
 
-    <hr/>
-
+    <hr />
+    <!--div with submit button-->
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Wyślij" class="btn btn-success" />

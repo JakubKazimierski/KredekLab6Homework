@@ -13,18 +13,22 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        /// <summary>
+        /// lists of itesms on subsites
+        /// </summary>
         List<SuitsViewModel> suits;
         List<WhiskeyViewModel> drinks;
         List<CigarsViewModel> cigars;
 
         /// <summary>
-        /// in constructor i create ready object of suits for sale in internet shop
+        /// in constructor i create ready object of items for sale in internet shop
         /// </summary>
         /// <param name="logger"></param>
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
 
+            //creating objects
             suits = new List<SuitsViewModel>();
             drinks = new List<WhiskeyViewModel>();
             cigars = new List<CigarsViewModel>();
@@ -75,10 +79,19 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             return View(suits);
         }
 
+        /// <summary>
+        /// method/link for drinks site
+        /// </summary>
+        /// <returns></returns>
         public IActionResult GetAllWhiskey()
         {
             return View(drinks);
         }
+
+        /// <summary>
+        /// region/link for cigars site
+        /// </summary>
+        /// <returns></returns>
         public IActionResult GetAllCigars()
         {
             return View(cigars);
@@ -86,12 +99,21 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
 
         #region Forms
         
+        /// <summary>
+        /// get request for data from user
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult ContactForm()
         {
             return View();
         }
 
+        /// <summary>
+        /// post request for temporary data gained from user
+        /// </summary>
+        /// <param name="formViewModel"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult ContactForm(ContactFormViewModel formViewModel)
         {
@@ -104,12 +126,21 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             return View("ContactFormGreetings");
         }
 
+        /// <summary>
+        /// get request for data from user
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult ComplainForm()
         {
             return View();
         }
 
+        /// <summary>
+        /// post request for temporary data from user
+        /// </summary>
+        /// <param name="formViewModel"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult ComplainForm(ComplainViewModel formViewModel)
         {
@@ -122,12 +153,21 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             return View("ComplainFormAfter");
         }
 
+        /// <summary>
+        /// get request for data from user
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult WorkForm()
         {
             return View();
         }
 
+        /// <summary>
+        /// post request for data from user
+        /// </summary>
+        /// <param name="formViewModel"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult WorkForm(WorkWithUsViewModel formViewModel)
         {
@@ -144,11 +184,19 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
 
         #endregion
 
+        /// <summary>
+        /// link/method of main site
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// link/method of site with privacy infos
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Privacy()
         {
             return View();

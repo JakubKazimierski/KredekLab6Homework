@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Lab6JakubKazimierskiZadDom.Models
 {
+    //class of model for contactForm (helpful when use database)
     public class ContactFormViewModel
     {
         /// <summary>
