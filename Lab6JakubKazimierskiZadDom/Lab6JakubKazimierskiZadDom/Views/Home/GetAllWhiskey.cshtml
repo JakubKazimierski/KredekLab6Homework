@@ -1,0 +1,19 @@
+﻿@model List<WhiskeyViewModel>
+@{
+    ViewData["Title"] = "GetAllWhiskey";
+}
+
+<h1>GetAllWhiskey</h1>
+@foreach (var whiskey in Model)
+{
+    <div>
+        <hr />
+        <h2>@whiskey.Model</h2>
+        <h4>Producent: @whiskey.Producer</h4>
+        <h4>Cena: @whiskey.Price zł</h4>
+        <img src="@Url.Content(whiskey.Photo)" alt="@whiskey.Model" />
+        <hr />
+
+    </div>
+}
+

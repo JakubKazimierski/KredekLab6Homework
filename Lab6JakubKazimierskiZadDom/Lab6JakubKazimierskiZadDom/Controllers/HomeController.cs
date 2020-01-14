@@ -14,6 +14,7 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
         private readonly ILogger<HomeController> _logger;
 
         List<SuitsViewModel> suits;
+        List<WhiskeyViewModel> drinks;
 
         /// <summary>
         /// in constructor i create ready object of suits for sale in internet shop
@@ -24,7 +25,10 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             _logger = logger;
 
             suits = new List<SuitsViewModel>();
+            drinks = new List<WhiskeyViewModel>();
+
             suits.Add(new SuitsViewModel("Va'Banque", "Armani", 7000, "~/Content/ImagesSuits/armani.png"));
+            drinks.Add(new WhiskeyViewModel("Singleton", "Dream", 200, "~/Content/ImagesWhiskey/singleton.png"));
         }
         /// <summary>
         /// link for buing  suits
@@ -33,6 +37,11 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
         public IActionResult GetAllSuits()
         {
             return View(suits);
+        }
+
+        public IActionResult GetAllWhiskey()
+        {
+            return View(drinks);
         }
 
         public IActionResult Index()
