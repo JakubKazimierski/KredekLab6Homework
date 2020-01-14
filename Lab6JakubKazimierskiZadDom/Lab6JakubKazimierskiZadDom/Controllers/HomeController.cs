@@ -51,6 +51,8 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             return View(cigars);
         }
 
+        #region Forms
+        
         [HttpGet]
         public IActionResult ContactForm()
         {
@@ -67,6 +69,24 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             return View("ContactFormGreetings");
         }
 
+        [HttpGet]
+        public IActionResult ComplainForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ComplainForm(ComplainViewModel formViewModel)
+        {
+            string firstName = formViewModel.FirstName;
+            string lastName = formViewModel.LastName;
+            ViewBag.UserName = firstName;//ulotne dane
+            ViewBag.UserLastName = lastName;//ulotne dane
+            return View("ComplainFormAfter");
+        }
+
+
+        #endregion
 
         public IActionResult Index()
         {
