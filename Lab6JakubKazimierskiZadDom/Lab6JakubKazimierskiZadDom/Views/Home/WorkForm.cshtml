@@ -40,6 +40,13 @@
             @Html.EditorFor(model => model.Motivation, new { @class = "form-control" })
         </div>
     </div>
+    <!--div with phone -->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Phone, new { @class = "form-control" })
+        </div>
+    </div>
 
     <hr />
     <!--div with submit button-->

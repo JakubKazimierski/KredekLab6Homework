@@ -120,9 +120,11 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             string firstName = formViewModel.FirstName;
             string lastName = formViewModel.LastName;
             string item = formViewModel.ProductName;
+            string number = formViewModel.AccountNumber;
             ViewBag.UserName = firstName;//ulotne dane
             ViewBag.UserLastName = lastName;//ulotne dane
             ViewBag.ProductName = item;
+            ViewBag.AccountNumber = number;
             return View("ContactFormGreetings");
         }
 
@@ -175,10 +177,12 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             string lastName = formViewModel.LastName;
             string university = formViewModel.University;
             string motivation = formViewModel.Motivation;
+            int phone = formViewModel.Phone;
             ViewBag.UserName = firstName;//ulotne dane
             ViewBag.UserLastName = lastName;//ulotne dane
             ViewBag.University = university;
             ViewBag.Motivation = motivation;
+            ViewBag.Phone = phone;
             return View("WorkFormAfter");
         }
 

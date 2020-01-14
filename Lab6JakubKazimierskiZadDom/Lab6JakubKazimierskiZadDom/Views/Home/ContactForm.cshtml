@@ -32,6 +32,14 @@
             @Html.EditorFor(model => model.ProductName, new { @class = "form-control" })
         </div>
     </div>
+    <!--div with account number-->
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.AccountNumber, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.AccountNumber, new { @class = "form-control" })
+        </div>
+    </div>
+
 
     <hr />
     <!--div with button-->

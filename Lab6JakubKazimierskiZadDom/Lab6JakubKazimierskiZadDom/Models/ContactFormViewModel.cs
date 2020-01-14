@@ -20,5 +20,10 @@ namespace Lab6JakubKazimierskiZadDom.Models
         /// opis
         /// </summary>
         public string ProductName { get; set; }
+
+        /// <summary>
+        /// account number
+        /// </summary>
+        public string AccountNumber { get; set; }
     }
 }

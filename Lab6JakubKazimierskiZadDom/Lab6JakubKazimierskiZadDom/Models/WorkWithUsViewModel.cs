@@ -24,5 +24,9 @@ namespace Lab6JakubKazimierskiZadDom.Models
         /// opis
         /// </summary>
         public string Motivation { get; set; }
+        /// <summary>
+        /// phone
+        /// </summary>
+        public int Phone { get; set; }
     }
 }
