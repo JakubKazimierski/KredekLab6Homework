@@ -64,8 +64,10 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
         {
             string firstName = formViewModel.FirstName;
             string lastName = formViewModel.LastName;
+            string item = formViewModel.ProductName;
             ViewBag.UserName = firstName;//ulotne dane
             ViewBag.UserLastName = lastName;//ulotne dane
+            ViewBag.ProductName = item;
             return View("ContactFormGreetings");
         }
 
@@ -80,11 +82,32 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
         {
             string firstName = formViewModel.FirstName;
             string lastName = formViewModel.LastName;
+            string complaint = formViewModel.Complain;
             ViewBag.UserName = firstName;//ulotne dane
             ViewBag.UserLastName = lastName;//ulotne dane
+            ViewBag.Complain = complaint;//ulotne dane
             return View("ComplainFormAfter");
         }
 
+        [HttpGet]
+        public IActionResult WorkForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult WorkForm(WorkWithUsViewModel formViewModel)
+        {
+            string firstName = formViewModel.FirstName;
+            string lastName = formViewModel.LastName;
+            string university = formViewModel.University;
+            string motivation = formViewModel.Motivation;
+            ViewBag.UserName = firstName;//ulotne dane
+            ViewBag.UserLastName = lastName;//ulotne dane
+            ViewBag.University = university;
+            ViewBag.Motivation = motivation;
+            return View("WorkFormAfter");
+        }
 
         #endregion
 

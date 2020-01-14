@@ -18,6 +18,6 @@ namespace Lab6JakubKazimierskiZadDom.Models
         /// <summary>
         /// opis
         /// </summary>
-        public string Description { get; set; }
+        public string ProductName { get; set; }
     }
 }

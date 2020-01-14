@@ -1,11 +1,12 @@
-﻿@model ContactFormViewModel
+﻿@model WorkWithUsViewModel
 @{
-    ViewData["Title"] = "ContactForm";
+    ViewData["Title"] = "WorkForm";
 }
 
-<h1>ContactForm</h1>
+<h1>WorkForm</h1>
 
-@using (Html.BeginForm("ContactForm", "Home", FormMethod.Post))
+
+@using (Html.BeginForm("WorkForm", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken();
 
@@ -24,13 +25,20 @@
     </div>
 
     <div class="form-horizontal">
-        @Html.LabelFor(model => model.ProductName, new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.University, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.ProductName, new { @class = "form-control" })
+            @Html.EditorFor(model => model.University, new { @class = "form-control" })
         </div>
     </div>
 
-    <hr/>
+    <div class="form-horizontal">
+        @Html.LabelFor(model => model.Motivation, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Motivation, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <hr />
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
