@@ -29,9 +29,42 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             drinks = new List<WhiskeyViewModel>();
             cigars = new List<CigarsViewModel>();
 
+            #region suits
             suits.Add(new SuitsViewModel("Va'Banque", "Armani", 7110, "~/Content/ImagesSuits/armani1.png"));
-            drinks.Add(new WhiskeyViewModel("Singleton", "Dream", 200, "~/Content/ImagesWhiskey/singleton.png"));
+            suits.Add(new SuitsViewModel("Mistress", "Hugo-Boss", 9800, "~/Content/ImagesSuits/boss1.png"));
+            suits.Add(new SuitsViewModel("Night", "Versace", 8300, "~/Content/ImagesSuits/versace1.png"));
+            suits.Add(new SuitsViewModel("The World", "Armani", 4670, "~/Content/ImagesSuits/armani2.png"));
+            suits.Add(new SuitsViewModel("Hermit-Purple", "Hugo-Boss", 2310, "~/Content/ImagesSuits/boss2.png"));
+            suits.Add(new SuitsViewModel("Star-Platinum", "Versace", 9430, "~/Content/ImagesSuits/versace2.png"));
+            suits.Add(new SuitsViewModel("Status-Quo", "Armani", 6650, "~/Content/ImagesSuits/armani3.png"));
+            suits.Add(new SuitsViewModel("Sean-Connery", "Hugo-Boss", 4510, "~/Content/ImagesSuits/boss3.png"));
+            suits.Add(new SuitsViewModel("Dio", "Versace", 3140, "~/Content/ImagesSuits/versace3.png"));
+            #endregion
+
+            #region drinks
+            drinks.Add(new WhiskeyViewModel("Singleton", "Dream", 210, "~/Content/ImagesWhiskey/singleton.png"));
+            drinks.Add(new WhiskeyViewModel("Star-Ward", "Stars", 140, "~/Content/ImagesWhiskey/starward.png"));
+            drinks.Add(new WhiskeyViewModel("Suthern-Comfort", "California", 230, "~/Content/ImagesWhiskey/suthernComfort.png"));
+            drinks.Add(new WhiskeyViewModel("Remy-Martin", "Requiem", 310, "~/Content/ImagesWhiskey/remyMartin.png"));
+            drinks.Add(new WhiskeyViewModel("Powers", "Martinez", 215, "~/Content/ImagesWhiskey/powers.png"));
+            drinks.Add(new WhiskeyViewModel("Knob-Creek", "King-Creek", 340, "~/Content/ImagesWhiskey/knobCreek2.png"));
+            drinks.Add(new WhiskeyViewModel("Crown-Royal", "Royal-Ruby", 500, "~/Content/ImagesWhiskey/crownRoyal.png"));
+            drinks.Add(new WhiskeyViewModel("Chivas-Regal", "Chivas", 260, "~/Content/ImagesWhiskey/chivasRegal2.png"));
+            drinks.Add(new WhiskeyViewModel("Charleston", "Charles-Company", 150, "~/Content/ImagesWhiskey/charleston.png"));
+            #endregion
+
+            #region cigars
             cigars.Add(new CigarsViewModel("Havana", "CubanPete", 100, "~/Content/ImagesCigar/havana.png"));
+            cigars.Add(new CigarsViewModel("Mexicano", "New-Mexico", 200, "~/Content/ImagesCigar/mexico.png"));
+            cigars.Add(new CigarsViewModel("Blue-Mountain", "Paramount", 340, "~/Content/ImagesCigar/blueMountain.png"));
+            cigars.Add(new CigarsViewModel("Cohiba", "Catharsis", 250, "~/Content/ImagesCigar/cohiba.png"));
+            cigars.Add(new CigarsViewModel("Cuban-Can", "Cuba", 110, "~/Content/ImagesCigar/cubanaCan.png"));
+            cigars.Add(new CigarsViewModel("Esteli", "Estrid", 300, "~/Content/ImagesCigar/esteli.png"));
+            cigars.Add(new CigarsViewModel("Monte-Christo", "Lord", 150, "~/Content/ImagesCigar/montechristo.png"));
+            cigars.Add(new CigarsViewModel("Ramon-Allones", "Ramones", 240, "~/Content/ImagesCigar/ramonAllones.png"));
+            cigars.Add(new CigarsViewModel("Trinidad", "Manifesto", 130, "~/Content/ImagesCigar/trinidad.png"));
+            #endregion
+
         }
         /// <summary>
         /// link for buing  suits
