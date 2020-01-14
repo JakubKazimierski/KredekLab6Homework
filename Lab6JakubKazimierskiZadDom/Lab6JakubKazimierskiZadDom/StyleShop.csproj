@@ -13,6 +13,7 @@
     <Folder Include="wwwroot\Content\ImagesSuits\" />
     <Folder Include="wwwroot\Content\ImagesWhiskey\" />
     <Folder Include="wwwroot\Content\ImagesCigar\" />
+    <Folder Include="wwwroot\Content\background\" />
   </ItemGroup>
 
 
