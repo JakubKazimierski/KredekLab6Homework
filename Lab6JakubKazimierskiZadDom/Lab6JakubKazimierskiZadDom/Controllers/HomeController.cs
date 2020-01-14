@@ -51,6 +51,23 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
             return View(cigars);
         }
 
+        [HttpGet]
+        public IActionResult ContactForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ContactForm(ContactFormViewModel formViewModel)
+        {
+            string firstName = formViewModel.FirstName;
+            string lastName = formViewModel.LastName;
+            ViewBag.UserName = firstName;//ulotne dane
+            ViewBag.UserLastName = lastName;//ulotne dane
+            return View("ContactFormGreetings");
+        }
+
+
         public IActionResult Index()
         {
             return View();
