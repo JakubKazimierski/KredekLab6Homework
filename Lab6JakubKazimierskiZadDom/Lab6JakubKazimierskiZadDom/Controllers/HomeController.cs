@@ -13,9 +13,26 @@ namespace Lab6JakubKazimierskiZadDom.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        List<SuitsViewModel> suits;
+
+        /// <summary>
+        /// in constructor i create ready object of suits for sale in internet shop
+        /// </summary>
+        /// <param name="logger"></param>
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+
+            suits = new List<SuitsViewModel>();
+            suits.Add(new SuitsViewModel("Va'Banque", "Armani", 7000, "~/Content/ImagesSuits/armani.png"));
+        }
+        /// <summary>
+        /// link for buing  suits
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult GetAllSuits()
+        {
+            return View(suits);
         }
 
         public IActionResult Index()

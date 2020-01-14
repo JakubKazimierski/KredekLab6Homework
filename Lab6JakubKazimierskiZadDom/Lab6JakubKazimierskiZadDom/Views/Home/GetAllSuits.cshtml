@@ -1,0 +1,20 @@
+﻿@model List<SuitsViewModel>
+@{
+    ViewData["Title"] = "GetAllSuits";
+}
+
+<!--View in html page for suits for sale-->
+<!--Each suit in list will be display on screen-->
+<h1>GetAllSuits</h1>
+@foreach (var suit in Model)
+{
+    <div>
+        <hr />
+        <h2>@suit.Model</h2>
+        <h4>Producent: @suit.Producer</h4>
+        <h4>Cena: @suit.Price zł</h4>
+        <img src="@Url.Content(suit.Photo)" alt="@suit.Model" />
+        <hr />
+
+    </div>
+}
