@@ -1,0 +1,18 @@
+﻿@model List<CigarsViewModel>
+@{
+    ViewData["Title"] = "GetAllCigars";
+}
+
+<h1>GetAllCigars</h1>
+@foreach (var cigar in Model)
+{
+    <div>
+        <hr />
+        <h2>@cigar.Model</h2>
+        <h4>Producent: @cigar.Producer</h4>
+        <h4>Cena: @cigar.Price zł</h4>
+        <img src="@Url.Content(cigar.Photo)" alt="@cigar.Model" />
+        <hr />
+
+    </div>
+}
